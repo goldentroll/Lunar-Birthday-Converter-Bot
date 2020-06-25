@@ -1,0 +1,1422 @@
+{
+    "_id": "st-51e70aeb-f15b-5803-b14e-cbbf9bcf51b0",
+    "refId": "77bfe849-22eb-51e4-9f4f-ac842136409e",
+    "notifyUserViaEmail": true,
+    "purpose": "customer",
+    "hasUserEndpoint": false,
+    "offKoraConfirmation": false,
+    "skipMakeEditLinks": false,
+    "type": "taskbot",
+    "variables": [],
+    "showInMp": false,
+    "defaultLanguage": "en",
+    "supportedLanguages": [
+        "en"
+    ],
+    "languagePreferences": {
+        "type": "lifeTime"
+    },
+    "pii_patterns": [],
+    "channels": [],
+    "color": "#009dab",
+    "sBannerColor": "#009dab",
+    "bBannerColor": "#009dab",
+    "categoryIds": [
+        "451902a073c071463e2fe7f6"
+    ],
+    "class": [],
+    "featured": false,
+    "sendVcf": false,
+    "isNLEnabled": true,
+    "interruptsEnabled": true,
+    "languagesToBeIgnored": [],
+    "localeData": {
+        "en": {
+            "name": "Lunar_Birthday_Converter",
+            "description": "Lunar_Birthday_Converter",
+            "errorCodes": {
+                "pollError": []
+            },
+            "nlMeta": {
+                "patterns": 0,
+                "synonyms": 0,
+                "mlUtterances": 0
+            },
+            "keywords": []
+        }
+    },
+    "interruptOptions": {
+        "interruptsEnabled": true,
+        "numTasksToHold": 1,
+        "type": {
+            "option": "developer",
+            "message": ""
+        },
+        "holdUxOptions": {
+            "option": "continueCurrTask",
+            "message": "Back to where we left off"
+        },
+        "resumeUxOptions": {
+            "option": "notifyUser",
+            "message": "Resuming interrupted task",
+            "neverNotify": true
+        },
+        "faqBehaviour": "respondAndResume"
+    },
+    "confidenceConfigs": [
+        {
+            "isActive": true,
+            "_id": "5b466c10ee292450a7f1a97a",
+            "mode": "ml",
+            "minThreshold": 0,
+            "maxThreshold": 80,
+            "exactMatchThreshold": 95
+        },
+        {
+            "isActive": true,
+            "_id": "5b466c10ee292450a7f1a979",
+            "mode": "faq",
+            "minThreshold": 60,
+            "maxThreshold": 80,
+            "taskMatchTolerance": 5,
+            "exactMatchThreshold": 95,
+            "suggestionsCount": 3,
+            "pathCoverage": 50
+        },
+        {
+            "isActive": true,
+            "_id": "5b466c10ee292450a7f1a978",
+            "mode": "cs",
+            "minThreshold": 60,
+            "maxThreshold": 80,
+            "taskMatchTolerance": 2,
+            "wordCoverage": 60
+        }
+    ],
+    "detectMultiIntent": false,
+    "isCsMatchEnabled": false,
+    "enableAutoUtteranceAddition": false,
+    "botSentimentEvents": [],
+    "botEvents": {
+        "WELCOME_MESSAGE_EVENT": {
+            "msg": [
+                {
+                    "localeData": {
+                        "en": {
+                            "text": "Hi%2C%20Welcome%20to%20the%20bot%20experience.",
+                            "type": "basic"
+                        }
+                    },
+                    "channel": "default",
+                    "createdBy": "u-23a241a9-43c7-5344-9846-5a17b4efe4f6",
+                    "lModBy": "u-23a241a9-43c7-5344-9846-5a17b4efe4f6",
+                    "lMod": "Tue Jul 24 2018 15:22:25 GMT+0000 (UTC)",
+                    "createdOn": "Tue Jul 24 2018 15:22:25 GMT+0000 (UTC)",
+                    "streamId": "st-51e70aeb-f15b-5803-b14e-cbbf9bcf51b0",
+                    "__v": 0
+                }
+            ],
+            "enabled": true,
+            "action": "showMsg",
+            "task": "",
+            "script": "",
+            "welcomeIvrOptions": {},
+            "manageFirstMessage": {
+                "greetings": "displayWelcomeMsg",
+                "faq": "displayWelcomeMsg",
+                "task": "displayWelcomeMsg"
+            }
+        },
+        "ON_CONNECT_EVENT": {
+            "msg": [
+                {
+                    "localeData": {
+                        "en": {
+                            "text": "Hi%2C%20Welcome%20to%20the%20bot%20experience.",
+                            "type": "basic"
+                        }
+                    },
+                    "channel": "default",
+                    "createdBy": "u-23a241a9-43c7-5344-9846-5a17b4efe4f6",
+                    "lModBy": "u-23a241a9-43c7-5344-9846-5a17b4efe4f6",
+                    "lMod": "Tue Jul 24 2018 15:22:25 GMT+0000 (UTC)",
+                    "createdOn": "Tue Jul 24 2018 15:22:25 GMT+0000 (UTC)",
+                    "streamId": "st-51e70aeb-f15b-5803-b14e-cbbf9bcf51b0",
+                    "__v": 0
+                }
+            ],
+            "enabled": true,
+            "action": "showMsg",
+            "task": "",
+            "script": ""
+        },
+        "TASK_FAILURE_EVENT": {
+            "enabled": false,
+            "msg": [],
+            "action": "",
+            "task": "",
+            "script": "",
+            "welcomeIvrOptions": {}
+        }
+    },
+    "actions": [],
+    "alerts": [],
+    "dialogs": [
+        {
+            "_id": "dg-3228ae75-76f3-5aa7-a26c-d13d4527e086",
+            "refId": "e7083123-745f-5aba-b6f7-c64ff08427ef",
+            "nodes": [
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "promptOptions": "required",
+                        "isOptional": false,
+                        "reuseOptions": 1
+                    },
+                    "nodeId": "intent0",
+                    "type": "intent",
+                    "componentId": "dc-40255663-9d05-5ba8-ba13-8f3e2b33fa9f",
+                    "transitions": [
+                        {
+                            "default": "entity6",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy0"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 202,
+                        "top": 139
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "promptOptions": "required",
+                        "isOptional": false,
+                        "reuseOptions": 1,
+                        "precedence": "entityOverIntent"
+                    },
+                    "nodeId": "entity6",
+                    "type": "entity",
+                    "componentId": "dc-ea22021a-6cf4-565d-8947-ec5d5c3af78f",
+                    "transitions": [
+                        {
+                            "default": "message7",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy8"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 206,
+                        "top": 292
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "promptOptions": "required",
+                        "isOptional": false,
+                        "reuseOptions": 1
+                    },
+                    "nodeId": "message7",
+                    "type": "message",
+                    "componentId": "dc-7bd01ee3-c764-5754-add3-8ae2ba5a808c",
+                    "transitions": [
+                        {
+                            "default": "entity9",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy10"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 496,
+                        "top": 287
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "promptOptions": "required",
+                        "isOptional": false,
+                        "message": [],
+                        "errorMessage": [],
+                        "reuseOptions": 1,
+                        "precedence": "entityOverIntent"
+                    },
+                    "nodeId": "entity9",
+                    "type": "entity",
+                    "componentId": "dc-71714217-f3d6-58a4-ba82-ee7a01e2f3e9",
+                    "transitions": [
+                        {
+                            "default": "dialogAct10",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy14"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 510,
+                        "top": 437
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "promptOptions": "required",
+                        "message": [],
+                        "errorMessage": [],
+                        "isOptional": false,
+                        "reuseOptions": 1,
+                        "precedence": "entityOverIntent"
+                    },
+                    "nodeId": "dialogAct10",
+                    "type": "dialogAct",
+                    "componentId": "dc-8ed44b97-4006-572c-89a2-3cc1e4bf6e75",
+                    "transitions": [
+                        {
+                            "if": {
+                                "dialogAct": "yes"
+                            },
+                            "then": "dialogAct16",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy17"
+                            }
+                        },
+                        {
+                            "if": {
+                                "dialogAct": "no"
+                            },
+                            "then": "script36",
+                            "metadata": {
+                                "color": "#5ea8d3",
+                                "connId": "dummy18"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 213,
+                        "top": 595
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "promptOptions": "required",
+                        "message": [],
+                        "errorMessage": [],
+                        "reuseOptions": 1,
+                        "precedence": "entityOverIntent"
+                    },
+                    "nodeId": "dialogAct16",
+                    "type": "dialogAct",
+                    "componentId": "dc-22644d1a-4e5a-5580-9fc3-e2cccbeff5b7",
+                    "transitions": [
+                        {
+                            "if": {
+                                "dialogAct": "yes"
+                            },
+                            "then": "entity17",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy41"
+                            }
+                        },
+                        {
+                            "if": {
+                                "dialogAct": "no"
+                            },
+                            "then": "service33",
+                            "metadata": {
+                                "color": "#5ea8d3",
+                                "connId": "dummy42"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 212,
+                        "top": 768
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "promptOptions": "required",
+                        "isOptional": false,
+                        "reuseOptions": 1,
+                        "precedence": "entityOverIntent"
+                    },
+                    "nodeId": "entity17",
+                    "type": "entity",
+                    "componentId": "dc-6ad2897c-5d68-5fc2-add0-bbe7830a0c5a",
+                    "transitions": [
+                        {
+                            "default": "message22",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy48"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 222,
+                        "top": 930
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "promptOptions": "required",
+                        "isOptional": false,
+                        "reuseOptions": 1
+                    },
+                    "nodeId": "message22",
+                    "type": "message",
+                    "componentId": "dc-de5a2ab8-a0d3-5b76-a690-c9dc906704e3",
+                    "transitions": [
+                        {
+                            "default": "service25",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy58"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 226,
+                        "top": 1069
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "promptOptions": "required",
+                        "message": [],
+                        "errorMessage": [],
+                        "reuseOptions": 1
+                    },
+                    "nodeId": "service25",
+                    "type": "service",
+                    "componentId": "dc-271dc7c7-b55c-5d45-b787-698718bceff6",
+                    "transitions": [
+                        {
+                            "default": "service28",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy68"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 506,
+                        "top": 1078
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "promptOptions": "required",
+                        "isOptional": false,
+                        "reuseOptions": 1
+                    },
+                    "nodeId": "service28",
+                    "type": "service",
+                    "componentId": "dc-01c6502c-f100-535e-8e56-bea575179522",
+                    "transitions": [
+                        {
+                            "default": "message30",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy74"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 803,
+                        "top": 1074
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "promptOptions": "required",
+                        "message": [],
+                        "errorMessage": [],
+                        "isOptional": false,
+                        "reuseOptions": 1
+                    },
+                    "nodeId": "message29",
+                    "type": "message",
+                    "componentId": "dc-42d4d4be-a5e4-5054-bc8e-a3064a4eddb6",
+                    "transitions": [
+                        {
+                            "if": {
+                                "context": "GetStarNoTOB.response.body.no_of_stars",
+                                "op": "eq",
+                                "value": "1"
+                            },
+                            "then": "message47",
+                            "metadata": {
+                                "color": "#5ea8d3",
+                                "connId": "dummy109"
+                            }
+                        },
+                        {
+                            "default": "entity52",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy75"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 763,
+                        "top": 778
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "promptOptions": "required",
+                        "message": [],
+                        "errorMessage": [],
+                        "reuseOptions": 1
+                    },
+                    "nodeId": "message30",
+                    "type": "message",
+                    "componentId": "dc-4ac9a639-8720-5f37-9078-cf13bc1f9f82",
+                    "transitions": [
+                        {
+                            "default": "end",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy76"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 1087,
+                        "top": 1068
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "promptOptions": "required",
+                        "message": [],
+                        "errorMessage": [],
+                        "reuseOptions": 1
+                    },
+                    "nodeId": "service33",
+                    "type": "service",
+                    "componentId": "dc-83338e73-ebc4-5dec-9ffb-06fb2de57ac1",
+                    "transitions": [
+                        {
+                            "default": "message29",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy82"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 496,
+                        "top": 794
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "promptOptions": "required",
+                        "message": [],
+                        "errorMessage": [],
+                        "reuseOptions": 1
+                    },
+                    "nodeId": "script36",
+                    "type": "script",
+                    "componentId": "dc-4ed9a11f-b96c-5aa8-a3dc-b77a4afbd0f4",
+                    "transitions": [
+                        {
+                            "default": "entity9",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy90"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 213,
+                        "top": 440
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "promptOptions": "required",
+                        "isOptional": false,
+                        "reuseOptions": 1
+                    },
+                    "nodeId": "message47",
+                    "type": "message",
+                    "componentId": "dc-271300b3-5cc5-5e28-af31-fc49382f555a",
+                    "transitions": [
+                        {
+                            "default": "service50",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy114"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 1048,
+                        "top": 785
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "promptOptions": "required",
+                        "isOptional": false,
+                        "reuseOptions": 1
+                    },
+                    "nodeId": "service50",
+                    "type": "service",
+                    "componentId": "dc-65bb1502-a64e-5674-a725-824393d8d5db",
+                    "transitions": [
+                        {
+                            "default": "message51",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy120"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 1325,
+                        "top": 796
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "message": [],
+                        "errorMessage": [],
+                        "reuseOptions": 1
+                    },
+                    "nodeId": "message51",
+                    "type": "message",
+                    "componentId": "dc-3d476484-4e37-5d78-94ac-4dba4323cc26",
+                    "transitions": [
+                        {
+                            "default": "end",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy120"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 1598,
+                        "top": 785
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "promptOptions": "required",
+                        "isOptional": false,
+                        "message": [],
+                        "errorMessage": [],
+                        "reuseOptions": 1,
+                        "precedence": "entityOverIntent"
+                    },
+                    "nodeId": "entity52",
+                    "type": "entity",
+                    "componentId": "dc-d887b828-7171-5c00-a264-cbae367578af",
+                    "transitions": [
+                        {
+                            "if": {
+                                "field": "entity52",
+                                "op": "eq",
+                                "value": "1"
+                            },
+                            "then": "message55",
+                            "metadata": {
+                                "color": "#5ea8d3",
+                                "connId": "dummy126"
+                            }
+                        },
+                        {
+                            "if": {
+                                "field": "entity52",
+                                "op": "eq",
+                                "value": "2"
+                            },
+                            "then": "message56",
+                            "metadata": {
+                                "color": "#5ea8d3",
+                                "connId": "dummy128"
+                            }
+                        },
+                        {
+                            "default": "script54",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy122"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 766,
+                        "top": 600
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "promptOptions": "required",
+                        "message": [],
+                        "errorMessage": [],
+                        "reuseOptions": 1
+                    },
+                    "nodeId": "script54",
+                    "type": "script",
+                    "componentId": "dc-b05fc11c-c54a-5caf-961e-929e06d261f1",
+                    "transitions": [
+                        {
+                            "default": "entity52",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy127"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 1016,
+                        "top": 347
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "message": [],
+                        "errorMessage": [],
+                        "reuseOptions": 1
+                    },
+                    "nodeId": "message55",
+                    "type": "message",
+                    "componentId": "dc-2998f484-ef2b-560f-bcb6-f3cfd82ecc93",
+                    "transitions": [
+                        {
+                            "default": "service50",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy129"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 1397,
+                        "top": 438
+                    }
+                },
+                {
+                    "nodeOptions": {
+                        "transitionType": "auto",
+                        "message": [],
+                        "errorMessage": [],
+                        "reuseOptions": 1
+                    },
+                    "nodeId": "message56",
+                    "type": "message",
+                    "componentId": "dc-eeef450a-9172-5997-b843-a1972c09416e",
+                    "transitions": [
+                        {
+                            "default": "service50",
+                            "metadata": {
+                                "color": "#299d8e",
+                                "connId": "dummy131"
+                            }
+                        }
+                    ],
+                    "metadata": {
+                        "left": 1436,
+                        "top": 537
+                    }
+                }
+            ],
+            "lname": "add an user",
+            "isHidden": false,
+            "localeData": {
+                "en": {
+                    "name": "Add an user",
+                    "shortDesc": "Add new user"
+                }
+            },
+            "isFollowUp": false
+        }
+    ],
+    "dialogComponents": [
+        {
+            "_id": "dc-01c6502c-f100-535e-8e56-bea575179522",
+            "refId": "a243599f-6c4a-5c85-b9a0-d69e93b7ff4e",
+            "name": "GetOccurence",
+            "endPoint": {
+                "host": "jeyanthchandru.info",
+                "port": "",
+                "path": "/TamilBirthdayCalendar/fetch_next_occurence.php",
+                "protocol": "http",
+                "method": "post",
+                "connectorEnabled": false
+            },
+            "authRequired": false,
+            "payload": {
+                "type": "raw",
+                "value": "%7B%0A%20%20%22type%22%3A%22chatbot%22%2C%0A%20%20%22dob%22%3A%20%22%7B%7Bcontext.entities.DOB%7D%7D%22%2C%0A%20%20%22star%22%3A%20%22%7B%7Bcontext.GetStar.response.body.star%7D%7D%22%2C%0A%20%20%22lunar_month%22%3A%20%22%7B%7Bcontext.GetStar.response.body.lunar_month%7D%7D%22%0A%7D"
+            },
+            "headers": {
+                "type": "raw",
+                "value": "{\"Content-Type\":\"application/json\"}"
+            },
+            "serviceType": "rest",
+            "idp": "none",
+            "serviceNodeType": "custom",
+            "type": "service",
+            "sampleResponse": [
+                {
+                    "name": "sampleResponse",
+                    "isDefault": true,
+                    "response": "{\"statusCode\":200,\"body\":{\"next_o\":\"03-08-2018\"},\"headers\":{\"server\":\"KoreOps\",\"content-type\":\"application/json\",\"vary\":\"Accept-Encoding\",\"cache-control\":\"max-age=0\",\"expires\":\"Thu, 12 Jul 2018 22:49:33 GMT\",\"content-encoding\":\"gzip\",\"connection\":\"close\"}}"
+                }
+            ],
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "GetOccurence"
+                }
+            },
+            "parentId": "dc-0d4505c6-1994-59d3-b058-e40737e1b35b",
+            "serviceAPITimeout": 20
+        },
+        {
+            "_id": "dc-22644d1a-4e5a-5580-9fc3-e2cccbeff5b7",
+            "refId": "adef81b4-980c-593f-8798-56b516f09966",
+            "name": "ConfirmTOB",
+            "serviceNodeType": "custom",
+            "type": "dialogAct",
+            "message": [
+                {
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "Perfect%2C%20Do%20you%20know%20your%20time%20of%20birth%3F",
+                            "type": "basic"
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "ConfirmTOB"
+                }
+            },
+            "parentId": "dc-85c92a8c-60cd-5c15-9f00-249e17291a97"
+        },
+        {
+            "_id": "dc-271300b3-5cc5-5e28-af31-fc49382f555a",
+            "refId": "bd477f6b-4c3d-53a5-be5d-65941169c89e",
+            "name": "FoundStar",
+            "serviceNodeType": "custom",
+            "type": "message",
+            "message": [
+                {
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "I%20have%20found%20your%20lunar%20star%20to%20be%20%22%7B%7Bcontext.GetStarNoTOB.response.body.stars%5B0%5D%7D%7D%22.",
+                            "type": "basic"
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "FoundStar"
+                }
+            },
+            "parentId": "dc-0aa2011f-e24c-5fef-9664-a59a32a100ee"
+        },
+        {
+            "_id": "dc-271dc7c7-b55c-5d45-b787-698718bceff6",
+            "refId": "5403b765-0204-5a40-aae5-2c8554217c40",
+            "name": "GetStar",
+            "endPoint": {
+                "host": "jeyanthchandru.info",
+                "port": "",
+                "path": "/TamilBirthdayCalendar/fetch_birthday.php",
+                "protocol": "http",
+                "method": "post",
+                "connectorEnabled": false
+            },
+            "authRequired": false,
+            "payload": {
+                "type": "raw",
+                "value": "%7B%0A%20%20%22type%22%3A%20%22chatbot%22%2C%0A%20%20%22isDOB%22%3A%20true%2C%0A%20%20%22date%22%3A%20%22%7B%7Bcontext.entities.DOB%7D%7D%22%2C%0A%20%20%22time%22%3A%20%22%7B%7Bcontext.entities.TOB%7D%7D%22%0A%7D"
+            },
+            "headers": {
+                "type": "raw",
+                "value": "{\"Content-Type\":\"application/json\"}"
+            },
+            "serviceType": "rest",
+            "idp": "none",
+            "serviceNodeType": "custom",
+            "type": "service",
+            "sampleResponse": [
+                {
+                    "name": "sampleResponse",
+                    "isDefault": true,
+                    "response": "{\"statusCode\":200,\"body\":{\"message\":\"Success\",\"date\":\"1995-07-18 16:50\",\"star\":\"ரேவதி\\t\"},\"headers\":{\"server\":\"KoreOps\",\"content-type\":\"application/json\",\"vary\":\"Accept-Encoding\",\"cache-control\":\"max-age=0\",\"expires\":\"Thu, 12 Jul 2018 03:31:01 GMT\",\"content-encoding\":\"gzip\",\"connection\":\"close\"}}"
+                }
+            ],
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "GetStar"
+                }
+            },
+            "parentId": "dc-edddc8ec-fa85-5249-b04c-b1a9cdf665e3",
+            "serviceAPITimeout": 20
+        },
+        {
+            "_id": "dc-2998f484-ef2b-560f-bcb6-f3cfd82ecc93",
+            "refId": "dd7018be-54ec-50e1-b81e-96a48414273d",
+            "name": "ChooseFirst",
+            "serviceNodeType": "custom",
+            "type": "message",
+            "message": [
+                {
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "Congratulations!!!%20You%20have%20found%20your%20lunar%20birth%20star%20to%20be%20as%20%7B%7Bcontext.GetStarNoTOB.response.body.stars%5B0%5D%7D%7D.",
+                            "type": "basic"
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "ChooseFirst"
+                }
+            },
+            "parentId": "dc-64d78e72-0036-566b-bf50-d79dd0c60ec9"
+        },
+        {
+            "_id": "dc-3d476484-4e37-5d78-94ac-4dba4323cc26",
+            "refId": "ad4ab9ae-83ee-5ece-b96c-0fe514a19bfb",
+            "name": "DisplayNextOccurrenceNoDOB",
+            "serviceNodeType": "custom",
+            "type": "message",
+            "message": [
+                {
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "Your%20upcoming%20birthday%20is%20at%20%7B%7Bcontext.GetOccurrenceNoTOB.response.body%7D%7D.",
+                            "type": "basic"
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "DisplayNextOccurrenceNoDOB"
+                }
+            },
+            "parentId": "dc-542ef689-c3d1-5761-a0c6-2d53b862dc11"
+        },
+        {
+            "_id": "dc-40255663-9d05-5ba8-ba13-8f3e2b33fa9f",
+            "refId": "007cd8da-03ff-5d72-8767-fd40fde6e74c",
+            "name": "Add_an_user",
+            "serviceNodeType": "custom",
+            "type": "intent",
+            "applyDefaultTemplate": false,
+            "dialogId": "dg-3228ae75-76f3-5aa7-a26c-d13d4527e086",
+            "localeData": {
+                "en": {
+                    "desc": "Add new user",
+                    "intent": "Add an user"
+                }
+            },
+            "parentId": "dc-8522dd1b-75c8-5d29-a727-1f1e1fb3c431"
+        },
+        {
+            "_id": "dc-42d4d4be-a5e4-5054-bc8e-a3064a4eddb6",
+            "refId": "2e8e3832-0b91-5632-957a-e64b854420fb",
+            "name": "LetmeCheck",
+            "serviceNodeType": "custom",
+            "type": "message",
+            "message": [
+                {
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "Okay%2C%20Just%20a%20moment.%20Let%20me%20check.",
+                            "type": "basic"
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "LetmeCheck"
+                }
+            },
+            "parentId": "dc-d0eb5259-d5c2-5529-92af-ad5d9a9bb1a4"
+        },
+        {
+            "_id": "dc-4ac9a639-8720-5f37-9078-cf13bc1f9f82",
+            "refId": "27edbb51-2ed1-576f-ba27-02ba5be79773",
+            "name": "DisplayNextOccurrence",
+            "serviceNodeType": "custom",
+            "type": "message",
+            "message": [
+                {
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "Your%20Lunar%20Star%20is%20%7B%7Bcontext.GetStar.response.body.star%7D%7D.%20Also%2C%20Your%20upcoming%20lunar%20birthday%20is%20at%20%7B%7Bcontext.GetOccurence.response.body%7D%7D.",
+                            "type": "basic"
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "DisplayNextOccurrence"
+                }
+            },
+            "parentId": "dc-6e43f6b6-e73e-5a94-9770-ab983790244a"
+        },
+        {
+            "_id": "dc-4ed9a11f-b96c-5aa8-a3dc-b77a4afbd0f4",
+            "refId": "f9cc2ba7-843e-5a47-b53c-9fc35d718edc",
+            "name": "ChangeDOB",
+            "script": "context.entities.DOB%20%3D%20%22%22%3B",
+            "serviceNodeType": "custom",
+            "type": "script",
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "ChangeDOB"
+                }
+            },
+            "parentId": "dc-bd3356e0-dbb1-5663-ab5c-16fc5505500d"
+        },
+        {
+            "_id": "dc-65bb1502-a64e-5674-a725-824393d8d5db",
+            "refId": "fe65be19-3043-5534-a9dc-d96e795ef4a8",
+            "name": "GetOccurrenceNoTOB",
+            "endPoint": {
+                "host": "jeyanthchandru.info",
+                "port": "",
+                "path": "/TamilBirthdayCalendar/fetch_next_occurence.php",
+                "protocol": "http",
+                "method": "post",
+                "connectorEnabled": false
+            },
+            "authRequired": false,
+            "payload": {
+                "type": "raw",
+                "value": "%7B%0A%20%20%22type%22%3A%22chatbot%22%2C%0A%20%20%22dob%22%3A%20%22%7B%7Bcontext.entities.DOB%7D%7D%22%2C%0A%20%20%22star%22%3A%20%22%7B%7Bcontext.GetStarNoTOB.response.body.stars%5B0%5D%7D%7D%22%2C%0A%20%20%22lunar_month%22%3A%20%22%7B%7Bcontext.GetStarNoTOB.response.body.lunar_month%7D%7D%22%0A%7D"
+            },
+            "headers": {
+                "type": "raw",
+                "value": "{\"Content-Type\":\"application/json\"}"
+            },
+            "serviceType": "rest",
+            "idp": "none",
+            "serviceNodeType": "custom",
+            "type": "service",
+            "sampleResponse": [
+                {
+                    "name": "sampleResponse",
+                    "isDefault": true,
+                    "response": "{\"statusCode\":200,\"body\":\"03 Aug 2018\",\"headers\":{\"server\":\"KoreOps\",\"content-type\":\"application/json\",\"vary\":\"Accept-Encoding\",\"cache-control\":\"max-age=0\",\"expires\":\"Fri, 13 Jul 2018 01:51:19 GMT\",\"content-encoding\":\"gzip\",\"connection\":\"close\"}}"
+                }
+            ],
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "GetOccurrenceNoTOB"
+                }
+            },
+            "parentId": "dc-40ffdd47-1d77-53bc-8999-40cdbc69cab4",
+            "serviceAPITimeout": 20
+        },
+        {
+            "_id": "dc-6ad2897c-5d68-5fc2-add0-bbe7830a0c5a",
+            "refId": "f83094e8-3bbb-5cd6-9f63-549838f617b9",
+            "name": "TOB",
+            "serviceNodeType": "custom",
+            "type": "entity",
+            "entityType": "time",
+            "message": [
+                {
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "Great%2C%20Go%20ahead%20and%20enter%20your%20time%20of%20birth.",
+                            "type": "basic"
+                        }
+                    }
+                }
+            ],
+            "errorMessage": [
+                {
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "I apologize. I am unable to recognize the time you entered. Please enter a time including whether this time is in the AM or PM.",
+                            "type": "basic"
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "TOB"
+                }
+            },
+            "parentId": "dc-b61da995-3438-578e-8ab6-8fdf39ce2dcc"
+        },
+        {
+            "_id": "dc-71714217-f3d6-58a4-ba82-ee7a01e2f3e9",
+            "refId": "fce587d4-c506-57b2-b523-f6fc3c3850c8",
+            "name": "DOB",
+            "serviceNodeType": "custom",
+            "type": "entity",
+            "entityType": "date",
+            "message": [
+                {
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "Enter%20your%20Date%20of%20Birth%20to%20find%20the%20Lunar%20star",
+                            "type": "basic"
+                        }
+                    }
+                }
+            ],
+            "errorMessage": [
+                {
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "I'm sorry, I am unable to recognize the date you entered. Please enter the date again, in the YYYY-MM-DD or MM-DD-YYYY form.",
+                            "type": "basic"
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "patterns": [],
+                    "label": "DOB"
+                }
+            },
+            "parentId": "dc-5b9facf2-b65c-5970-9843-4e11a8dd471a"
+        },
+        {
+            "_id": "dc-7bd01ee3-c764-5754-add3-8ae2ba5a808c",
+            "refId": "a8c6bbce-a593-59a9-9cfc-560258c0d709",
+            "name": "ThanksNode",
+            "serviceNodeType": "custom",
+            "type": "message",
+            "message": [
+                {
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "Thanks%20%7B%7Bcontext.entities.PersonName%7D%7D",
+                            "type": "basic"
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "ThanksNode"
+                }
+            },
+            "parentId": "dc-a94f919e-f172-5b66-a6ff-24a755c15654"
+        },
+        {
+            "_id": "dc-83338e73-ebc4-5dec-9ffb-06fb2de57ac1",
+            "refId": "72f21da8-59b0-5d45-8313-6dd90b7fa34a",
+            "name": "GetStarNoTOB",
+            "endPoint": {
+                "host": "jeyanthchandru.info",
+                "port": "",
+                "path": "/TamilBirthdayCalendar/fetch_birthday.php",
+                "protocol": "http",
+                "method": "post",
+                "connectorEnabled": false
+            },
+            "authRequired": false,
+            "payload": {
+                "type": "raw",
+                "value": "%7B%0A%20%20%22type%22%3A%22chatbot%22%2C%0A%20%20%22isDOB%22%3Afalse%2C%0A%20%20%22date%22%3A%22%7B%7Bcontext.entities.DOB%7D%7D%22%0A%7D"
+            },
+            "headers": {
+                "type": "raw",
+                "value": "{\"Content-Type\":\"application/json\"}"
+            },
+            "serviceType": "rest",
+            "idp": "none",
+            "serviceNodeType": "custom",
+            "type": "service",
+            "sampleResponse": [
+                {
+                    "name": "sampleResponse",
+                    "isDefault": true,
+                    "response": "{\"statusCode\":200,\"body\":{\"stars\":[\"Uthirattadhi\",\"Revathi\"],\"no_of_stars\":2},\"headers\":{\"server\":\"KoreOps\",\"content-type\":\"application/json\",\"vary\":\"Accept-Encoding\",\"cache-control\":\"max-age=0\",\"expires\":\"Fri, 13 Jul 2018 00:16:28 GMT\",\"content-encoding\":\"gzip\",\"connection\":\"close\"}}"
+                }
+            ],
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "GetStarNoTOB"
+                }
+            },
+            "parentId": "dc-d2ac107c-c412-553f-9036-30a42d6c0686",
+            "serviceAPITimeout": 20
+        },
+        {
+            "_id": "dc-8ed44b97-4006-572c-89a2-3cc1e4bf6e75",
+            "refId": "e1b11b0e-b16b-5908-8c26-214c2a20f468",
+            "name": "ConfirmDOB",
+            "serviceNodeType": "custom",
+            "type": "dialogAct",
+            "message": [
+                {
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "Did%20I%20get%20your%20DOB%20right%20in%20the%20format%20as%20(YYYY-MM-DD)%20%3F%20-%20%7B%7Bcontext.entities.DOB%7D%7D",
+                            "type": "basic"
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "ConfirmDOB"
+                }
+            },
+            "parentId": "dc-afbc2976-b214-5130-a4b1-1851ccc3723f"
+        },
+        {
+            "_id": "dc-b05fc11c-c54a-5caf-961e-929e06d261f1",
+            "refId": "ca21315e-a9f8-50c8-95b0-4cbb2296f044",
+            "name": "ChangeChoice",
+            "script": "context.entities.ChooseOne%20%3D%20%22%22%3B",
+            "serviceNodeType": "custom",
+            "type": "script",
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "ChangeChoice"
+                }
+            },
+            "parentId": "dc-0b9cf1ce-52cb-5326-ad32-74c56d11b2a3"
+        },
+        {
+            "_id": "dc-d887b828-7171-5c00-a264-cbae367578af",
+            "refId": "52d1e365-a3c5-5a0f-b2b7-d183641ff06d",
+            "name": "ChooseOne",
+            "serviceNodeType": "custom",
+            "type": "entity",
+            "entityType": "number",
+            "message": [
+                {
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "print('I%20have%20two%20lunar%20stars%20on%20the%20same%20day.%20You%20can%20choose%20one%20whichever%20you%20like.%5Cn%5Cn1.%20'%20%2B%20context.GetStarNoTOB.response.body.stars%5B0%5D%20%2B%20'%5Cn2.%20'%20%2B%20context.GetStarNoTOB.response.body.stars%5B1%5D)%3B",
+                            "type": "uxmap"
+                        }
+                    }
+                }
+            ],
+            "errorMessage": [
+                {
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "I'm sorry, I did not recognize the number you entered. Please enter a number again. ",
+                            "type": "basic"
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "ChooseOne"
+                }
+            },
+            "parentId": "dc-3bfd5b1e-9022-5fdb-99d7-63a157be09c9"
+        },
+        {
+            "_id": "dc-de5a2ab8-a0d3-5b76-a690-c9dc906704e3",
+            "refId": "70f90f60-39c7-55c0-abe7-f90d1616a6c8",
+            "name": "Awesome",
+            "serviceNodeType": "custom",
+            "type": "message",
+            "message": [
+                {
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "Awesome%2C%20Let%20me%20fetch%20the%20lunar%20star%20for%20you.",
+                            "type": "basic"
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "Awesome"
+                }
+            },
+            "parentId": "dc-09a83af0-a9a6-5068-9f1f-c8bfa38fa4eb"
+        },
+        {
+            "_id": "dc-ea22021a-6cf4-565d-8947-ec5d5c3af78f",
+            "refId": "61b07daa-8244-50be-b080-d278a815c3f0",
+            "name": "PersonName",
+            "serviceNodeType": "custom",
+            "type": "entity",
+            "entityType": "person_name",
+            "message": [
+                {
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "Enter%20your%20name%20to%20continue",
+                            "type": "basic"
+                        }
+                    }
+                }
+            ],
+            "errorMessage": [
+                {
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "I'm sorry, I did not recognize the name you entered. Please enter the name of the person including both the first and last name.",
+                            "type": "basic"
+                        }
+                    }
+                }
+            ],
+            "isArray": false,
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "PersonName"
+                }
+            },
+            "parentId": "dc-98edd466-be13-5b11-9d4c-30cbe550ba84"
+        },
+        {
+            "_id": "dc-eeef450a-9172-5997-b843-a1972c09416e",
+            "refId": "6e2f72e0-2f20-5be3-be8b-3096c357c413",
+            "name": "ChooseSecond",
+            "serviceNodeType": "custom",
+            "type": "message",
+            "message": [
+                {
+                    "channel": "default",
+                    "localeData": {
+                        "en": {
+                            "text": "print('Congratulations!!!%20You%20have%20found%20your%20lunar%20birth%20star%20to%20be%20as%20%7B%7Bcontext.GetStarNoTOB.response.body.stars%5B1%5D%7D%7D.')%3B%0Acontext.GetStarNoTOB.response.body.stars%5B0%5D%20%3D%20context.GetStarNoTOB.response.body.stars%5B1%5D%3B",
+                            "type": "uxmap"
+                        }
+                    }
+                }
+            ],
+            "applyDefaultTemplate": false,
+            "localeData": {
+                "en": {
+                    "label": "ChooseSecond"
+                }
+            },
+            "parentId": "dc-bef7eac9-f8a4-5d36-aedf-586be638d3d9"
+        }
+    ],
+    "knowledgeTasks": [],
+    "smallTalk": [],
+    "widgets": [],
+    "panels": [],
+    "unexportedTasks": [],
+    "customDashboards": [],
+    "paramMaps": [],
+    "taskDgParamMaps": [],
+    "idpConfigurations": [],
+    "sentences": [],
+    "koraResponses": [],
+    "customTemplates": [],
+    "mlParams": [],
+    "contentVariables": [],
+    "exportOptions": {
+        "tasks": [
+            "botTask",
+            "knowledgeGraph",
+            "smallTalk"
+        ],
+        "nlpData": [
+            "nlpSettings",
+            "utterances",
+            "standardResponses"
+        ],
+        "settings": [
+            "botSettings",
+            "botVariables",
+            "ivrSettings"
+        ],
+        "subTasks": {
+            "actions": [
+                "a-fe6e80e0-44c2-53d5-b2b3-05789e00b04d"
+            ],
+            "dialogs": [
+                "dg-3228ae75-76f3-5aa7-a26c-d13d4527e086",
+                "dg-b82e4910-0cc7-53eb-b260-e7db13dad9b7"
+            ],
+            "alerts": []
+        },
+        "IncludeDependentTasks": true
+    },
+    "traits": []
+}
